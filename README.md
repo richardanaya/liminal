@@ -9,7 +9,7 @@
 1. Install [Ollama](https://ollama.com/)
 2. `ollama pull phi3`
 3. `cargo install liminal`
-4. `liminal`
+4. `liminal -m phi3`
 5. Go to http://localhost:1111 and go to your first URL
 6. ＷＡＮＤＥＲ
 
