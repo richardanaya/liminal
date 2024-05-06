@@ -15,7 +15,7 @@ async fn main() {
         .route("/", get(root));
 
     println!("Server running on http://localhost:1111");
-    // run our app with hyper, listening globally on port 3000
+    // run our app with hyper, listening globally on port 1111
     let listener = tokio::net::TcpListener::bind("0.0.0.0:1111").await.unwrap();
     axum::serve(listener, app).await.unwrap();
 }
@@ -28,7 +28,7 @@ async fn root(pagination: Query<LiminalWeb>) -> Html<String> {
         let c = format!(
             r#"{{
                 "model": "phi3",
-                "prompt": "HTML for a website with url {} that looks like a realistic website but surreally different. Fill with user content. Make no references to this being a fake page. In this alternate internet the world is happy and friendly. No css stylsheets and only minimal color (like background). No images. No javascript. All links/form action urls on page should be prefixed with http://localhost:3000/?url=<full url goes here of link> . Links don't use targets. Just give me the HTML and make no commentary about the result and use no markdown/wiki annotation like (ie ```html).",
+                "prompt": "HTML for a website with url {}. Make sure there's some user content relevant to the site. Always have at least 5 links to sub pages on the main pages topic (not including the footer). No css stylesheets and only minimal color (like background). No images. No javascript. All links/form action urls on page should be prefixed with http://localhost:1111/?url=<full url goes here of link> . Links don't use targets. Just give me the HTML and make no commentary about the result and use no markdown/wiki annotation like (ie ```html).",
                 "stream": false
             }}"#,
             &url
@@ -44,6 +44,10 @@ async fn root(pagination: Query<LiminalWeb>) -> Html<String> {
         let result = serde_json::from_str::<serde_json::Value>(&text).unwrap();
         // get 'response' property from JSON
         let response = result["response"].as_str().unwrap();
+        // remove ```html
+        let response = response.replace("```html", "");
+        // remove ```
+        let response = response.replace("```", "");
         return response.to_string().into();
     }
 
