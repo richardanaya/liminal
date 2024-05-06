@@ -18,4 +18,5 @@
 
 * No images
 * No javascript
+* No CSS style sheets
 * No links outside
