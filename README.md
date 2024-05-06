@@ -10,7 +10,7 @@
 2. `ollama pull phi3`
 3. `cargo install liminal`
 4. `liminal`
-5. Go to http://localhost:3000 and go to your first URL
+5. Go to http://localhost:1111 and go to your first URL
 6. ＷＡＮＤＥＲ
 
 
