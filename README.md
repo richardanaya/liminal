@@ -1,12 +1,14 @@
-# Liminal
+<p align="center">
+  ＬＩＭＩＮＡＬ<br/>
+  Ａｎ　ｉｎｔｅｒｎｅｔ　ｔｈａｔ　ｎｅｖｅｒ　ｗａｓ．<br/><br/>
+  <img src="https://github.com/richardanaya/liminal/assets/294042/2c65637d-5094-42be-a2be-b418e53c7558" width=300>
+</p>
 
-An internet that never was.
 
-```
-# Install Ollama
-ollama pull phi3
-cargo install liminal
-liminal
-```
 
-Go to http://localhost:3000 and go to your first URL.
+1. Install [Ollama](https://ollama.com/)
+2. `ollama pull phi3`
+3. `cargo install liminal`
+4. `liminal`
+5. Go to http://localhost:3000 and go to your first URL
+6. ＷＡＮＤＥＲ
