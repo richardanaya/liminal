@@ -12,3 +12,10 @@
 4. `liminal`
 5. Go to http://localhost:3000 and go to your first URL
 6. ＷＡＮＤＥＲ
+
+
+ＳＡＦＥＴＹ
+
+* No images
+* No javascript
+* No links outside
