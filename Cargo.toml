@@ -1,0 +1,15 @@
+[package]
+name = "liminal"
+version = "0.1.0"
+edition = "2021"
+description = "An AI hallucination of an internet"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = { version = "0.12", features = ["json"] }
+axum = "0.7.5"
+serde = { version = "1.0", features = ["derive"] }
+tokio = { version = "1", features = ["full"] }
+serde_json = "1.0.116"
