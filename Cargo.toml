@@ -4,6 +4,9 @@ version = "0.1.0"
 edition = "2021"
 description = "An AI hallucination of an internet"
 license = "MIT"
+repository = "https://github.com/richardanaya/liminal"
+readme = "README.md"
+keywords = ["ai", "internet", "hallucination"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
